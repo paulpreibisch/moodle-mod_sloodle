@@ -70,7 +70,7 @@ class sloodle_view_currency extends sloodle_base_view {
         $mode = optional_param('mode', "view", PARAM_TEXT); 
 
         if ( ($mode != 'view') &&  (!$this->can_edit) ) {
-            print_error('Permission denied');
+            throw new \moodle_exception('Permission denied');
         }
 
         switch($mode) {
@@ -94,7 +94,7 @@ class sloodle_view_currency extends sloodle_base_view {
                 $result = sloodle_update_record('sloodle_currency_types',$currency);
                 if (!$result) {
                 $errorlink = $CFG->wwwroot."/mod/sloodle/view.php?_type=currency&id={$id}";
-                    print_error(get_string('general:fail','sloodle'),$errorlink);
+                    throw new \moodle_exception(get_string('general:fail','sloodle'),$errorlink);
                 }
 
                 break;
@@ -116,7 +116,7 @@ class sloodle_view_currency extends sloodle_base_view {
                 $result = sloodle_insert_record('sloodle_currency_types',$currency);
                 if (!$result) {
                 $errorlink = $CFG->wwwroot."/mod/sloodle/view.php?_type=currency&id={$id}";
-                print_error(get_string('general:fail','sloodle'),$errorlink);
+                throw new \moodle_exception(get_string('general:fail','sloodle'),$errorlink);
                 }
 
                 break;
@@ -128,7 +128,7 @@ class sloodle_view_currency extends sloodle_base_view {
 
                 if (!$result) {
                     $errorlink = $CFG->wwwroot."/mod/sloodle/view.php?_type=currency&id={$id}";
-                    print_error(get_string('general:fail','sloodle'),$errorlink);
+                    throw new \moodle_exception(get_string('general:fail','sloodle'),$errorlink);
                 }
 
                 break;

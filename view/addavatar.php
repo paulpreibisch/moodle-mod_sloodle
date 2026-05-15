@@ -122,7 +122,7 @@ class sloodle_view_addavatar extends sloodle_base_view
 	$system_context = get_context_instance(CONTEXT_SYSTEM);
  	
         // Only allow admins to do this.
-        if (!has_capability('moodle/user:editprofile', $system_context)) print_error('Only site administrators have access to this page.');
+        if (!has_capability('moodle/user:editprofile', $system_context)) throw new \moodle_exception('Only site administrators have access to this page.');
     }
     
     /**

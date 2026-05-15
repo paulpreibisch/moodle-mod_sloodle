@@ -466,53 +466,23 @@
     }
 
 
-    /**
-    * Gets the different sub-types of Sloodle module available as a list for the "Add Activity..." menu.
-    * Also adds the 'Sloodle Map' resource type.
-    *
-    * $return array Entries for the "Add Activity..." and "Add Resource..." menus.
-    */
-
-    function sloodle_get_types() {
-        global $CFG, $SLOODLE_TYPES;
-        $types = array();
-
-        // Start the group of activities
-        $type = new object();
-        $type->modclass = MOD_CLASS_ACTIVITY;
-        $type->type = "sloodle_group_start";
-        $type->typestr = '--'.get_string('modulenameplural', 'sloodle');
-        $types[] = $type;
-         
-        // Go through each Sloodle module type, and add it
-        foreach ($SLOODLE_TYPES as $st) {
-            $type = new object();
-            $type->modclass = MOD_CLASS_ACTIVITY;
-            $type->type = "sloodle&amp;type=$st";
-            $type->typestr = get_string("moduletype:$st", 'sloodle');
-            $types[] = $type;
-        }
-
-        // End the group of activities
-        $type = new object();
-        $type->modclass = MOD_CLASS_ACTIVITY;
-        $type->type = "sloodle_group_end";
-        $type->typestr = '--';
-        $types[] = $type;
-
-        return $types;
-    }
-
 /**
  * @param string $feature FEATURE_xx constant for requested feature
- * @return bool True if sloodle supports feature
+ * @return mixed True/false/null
  */
 function sloodle_supports($feature) {
-    switch($feature) {
+    switch ($feature) {
         case FEATURE_MOD_INTRO:               return true;
-        case FEATURE_BACKUP_MOODLE2:          return true; 
-
-        default: return null;
+        case FEATURE_BACKUP_MOODLE2:          return true;
+        case FEATURE_SHOW_DESCRIPTION:        return true;
+        case FEATURE_NO_VIEW_LINK:            return false;
+        case FEATURE_IDNUMBER:                return false;
+        case FEATURE_GROUPS:                  return false;
+        case FEATURE_GROUPINGS:               return false;
+        case FEATURE_GRADE_HAS_GRADE:         return false;
+        case FEATURE_GRADE_OUTCOMES:          return false;
+        case FEATURE_COMPLETION_TRACKS_VIEWS: return false;
+        default:                              return null;
     }
 }
 

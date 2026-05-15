@@ -298,7 +298,7 @@ if (count($messages)) {
 $output = $PAGE->get_renderer('mod_quiz');
 if (!$attemptobj->is_preview_user() && $messages) {
     // TODO: SLOODLE ERROR
-    //print_error('attempterror', 'quiz', $attemptobj->view_url(),
+    //throw new \moodle_exception('attempterror', 'quiz', $attemptobj->view_url(),
      //       $output->access_messages($messages));
 }
 
@@ -547,7 +547,7 @@ if ($finishattempt) {
 
     /*
     } catch (question_out_of_sequence_exception $e) {
-        print_error('submissionoutofsequencefriendlymessage', 'question',
+        throw new \moodle_exception('submissionoutofsequencefriendlymessage', 'question',
                 $attemptobj->attempt_url(null, $thispage));
     */
 

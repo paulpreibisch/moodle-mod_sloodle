@@ -80,7 +80,7 @@ class sloodle_view_backpack extends sloodle_base_view {
     if ($isItemAdd) {
 
     if (!$this->can_edit) {
-    print_error("Permission denied");
+    throw new \moodle_exception("Permission denied");
     }
 
     $controllerid = required_param('controllerid', PARAM_INT);
@@ -91,7 +91,7 @@ class sloodle_view_backpack extends sloodle_base_view {
     //create controller so we can fetch active round
     $controller = new SloodleController();
     if(!$controller->load_by_course_module_id($controllerid)) {
-    print_error('Could not load controller for '.$controllerid);
+    throw new \moodle_exception('Could not load controller for '.$controllerid);
     }
     $roundid = $controller->get_active_roundid(true);
 

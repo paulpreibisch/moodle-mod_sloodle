@@ -1,19 +1,9 @@
 <?php
 
-////////////////////////////////////////////////////////////////////////////////
-//  Code fragment to define the module version etc.
-//  This fragment is called by /admin/index.php
-////////////////////////////////////////////////////////////////////////////////
+defined('MOODLE_INTERNAL') || die();
 
-$module->version  = 2011081701;
-$module->requires = 2007021500;  // Requires Moodle 1.8
-
-// For Moodle 2, we have to pretend we don't work on Moodle 1.9 or Moodle gets upset.
-global $CFG;
-if ($CFG->version > 2010060800) {
-    $module->requires = 2010000000;  // Requires Moodle 2.0 
-}
-
-$module->cron     = 60;
-
-?>
+$plugin->version   = 2026051500;
+$plugin->requires  = 2022112800;   // Moodle 4.1
+$plugin->component = 'mod_sloodle';
+$plugin->maturity  = MATURITY_STABLE;
+$plugin->release   = '2.3.0';
