@@ -747,7 +747,7 @@ class SloodleConfigurationOption {
 		return $to;
 	}
 
-	function renderForMoodleForm() {
+	function renderForMoodleForm($selectedoption = null) {
 
 	}
 
@@ -797,7 +797,7 @@ class SloodleConfigurationOptionSelectOne extends SloodleConfigurationOption {
 		$this->type = 'select_one';
 	}
 
-	function renderForMoodleForm($selectedoption) {
+	function renderForMoodleForm($selectedoption = null) {
 	}
 
 }

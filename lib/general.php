@@ -1058,7 +1058,7 @@
     {
         $size = trim($size);
         $num = (int)$size;
-        $char = strtolower($size{strlen($size)-1});
+        $char = strtolower($size[strlen($size)-1]);
         switch ($char)
         {
         case 'g': $num *= 1024;

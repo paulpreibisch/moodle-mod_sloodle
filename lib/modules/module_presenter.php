@@ -530,7 +530,7 @@
         * Gets the short type name of this instance.
         * @return string
         */
-        function get_type()
+        static function get_type()
         {
             return SLOODLE_TYPE_PRESENTER;
         }
