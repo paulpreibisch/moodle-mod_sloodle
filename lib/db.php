@@ -58,7 +58,7 @@ function sloodle_get_records_sql_params($p1=null, $p2=null) {
 }
 
 
-function sloodle_get_records_select_params( $p1=null, $p2=null, $params, $p3=null, $p4 = '*', $p5 = null, $p6 = null) {
+function sloodle_get_records_select_params( $p1, $p2, $params, $p3=null, $p4 = '*', $p5 = null, $p6 = null) {
    if ( sloodle_do_use_db_object() ) {
       global $DB;
       return $DB->get_records_select($p1, $p2, $params, $p3, $p4, $p5, $p6); // get_records_select now has an option to pass in an array of params
@@ -68,7 +68,7 @@ function sloodle_get_records_select_params( $p1=null, $p2=null, $params, $p3=nul
    }
 }
 
-function sloodle_get_record_select_params( $p1=null, $p2=null, $params, $p3, $p4 = '*', $p5 = null, $p6 = null) {
+function sloodle_get_record_select_params( $p1, $p2, $params, $p3, $p4 = '*', $p5 = null, $p6 = null) {
    if ( sloodle_do_use_db_object() ) {
       global $DB;
       return $DB->get_record_select($p1, $p2, $params, $p3, $p4, $p5, $p6); // get_record_select now has an option to pass in an array of params
@@ -122,7 +122,7 @@ function sloodle_count_records($p1=null, $p2=null, $p3=null, $p4 = null, $p5 = n
    }
 }
 
-function sloodle_count_records_select_params($p1=null, $p2, $params) {
+function sloodle_count_records_select_params($p1, $p2, $params) {
    if ( sloodle_do_use_db_object() ) {
       global $DB;
       return $DB->count_records_select($p1, $p2, $params) ;
@@ -144,7 +144,7 @@ function sloodle_delete_records($p1=null, $p2=null, $p3=null, $p4=null, $p5=null
    }
 }
 
-function sloodle_delete_records_select_params($p1=null, $p2=null, $params) {
+function sloodle_delete_records_select_params($p1, $p2, $params) {
    if ( sloodle_do_use_db_object() ) {
       global $DB;
       return $DB->delete_records_select($p1, $p2, $params);
@@ -163,7 +163,7 @@ function sloodle_get_field($p1=null, $p2=null, $p3=null, $p4=null, $p5=null, $p6
    }
 }
 
-function sloodle_get_field_sql_params($p1=null, $params) {
+function sloodle_get_field_sql_params($p1, $params) {
    if ( sloodle_do_use_db_object() ) {
       global $DB;
       return $DB->get_field_sql($p1, $params);
