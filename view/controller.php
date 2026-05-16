@@ -30,7 +30,7 @@ class sloodle_view_controller extends sloodle_base_view_module
     /**
     * Constructor.
     */
-    function sloodle_view_controller()
+    function __construct()
     {
     }
 

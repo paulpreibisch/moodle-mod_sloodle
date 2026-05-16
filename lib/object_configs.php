@@ -759,7 +759,7 @@ class SloodleConfigurationOption {
 
 class SloodleConfigurationOptionYesNo extends SloodleConfigurationOption {
 
-	function SloodleConfigurationOptionYesNo( $fieldname, $title, $description = '', $default = 0 ) {
+	function __construct( $fieldname, $title, $description = '', $default = 0 ) {
 		$this->fieldname = $fieldname;
 		$this->title = $title;
 		$this->description = $description;
@@ -772,7 +772,7 @@ class SloodleConfigurationOptionYesNo extends SloodleConfigurationOption {
 
 class SloodleConfigurationOptionText extends SloodleConfigurationOption {
 
-	function SloodleConfigurationOptionText( $fieldname, $title, $description, $default = '', $length = 8 ) {
+	function __construct( $fieldname, $title, $description, $default = '', $length = 8 ) {
 		$this->fieldname = $fieldname;
 		$this->title = $title;
 		$this->description = $description;
@@ -787,7 +787,7 @@ class SloodleConfigurationOptionText extends SloodleConfigurationOption {
 // NB This could be presented as a set of radio buttons rather than a select
 class SloodleConfigurationOptionSelectOne extends SloodleConfigurationOption {
 
-	function SloodleConfigurationOptionSelectOne( $fieldname = null, $title = null, $no_option_text = null, $description = null, $options = array(), $default = null) {
+	function __construct( $fieldname = null, $title = null, $no_option_text = null, $description = null, $options = array(), $default = null) {
 		$this->fieldname = $fieldname;
 		$this->title = $title;
 		$this->no_option_text = $no_option_text;
@@ -811,7 +811,7 @@ class SloodleConfigurationOptionCourseModuleChoice extends SloodleConfigurationO
 	// An array of key-value pairs for filtering the instance modules
 	var $instancefilters = array();
 
-	function SloodleConfigurationOptionCourseModuleChoice( $fieldname, $title, $description, $noneavailablemessage, $instancefilters ) {
+	function __construct( $fieldname, $title, $description, $noneavailablemessage, $instancefilters ) {
 		$this->fieldname = $fieldname;
 		$this->title = $title;
 		$this->is_value_translatable = false;
@@ -827,7 +827,7 @@ class SloodleConfigurationOptionCourseModuleChoice extends SloodleConfigurationO
 
 class SloodleConfigurationOptionCurrencyChoice extends SloodleConfigurationOption {
 
-	function SloodleConfigurationOptionCurrencyChoice( $fieldname, $title, $description, $default = '', $length = 8 ) {
+	function __construct( $fieldname, $title, $description, $default = '', $length = 8 ) {
 
 		if ( !$currencies = SloodleCurrency::FetchAll() ) {
 			return false;

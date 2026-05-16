@@ -48,7 +48,7 @@ class sloodle_view_course extends sloodle_base_view
     /**
     * Constructor.
     */
-    function sloodle_view_course()
+    function __construct()
     {
     }
 

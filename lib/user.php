@@ -66,7 +66,7 @@
         * @param object &$_session Reference to the containing {@link SloodleSession} object, if available.
         * @access public
         */
-        function SloodleUser(&$_session = null)
+        function __construct(&$_session = null)
         {
             if (!is_null($_session)) $this->_session = &$_session;
         }

@@ -97,7 +97,7 @@ class sloodle_view_presenter extends sloodle_base_view_module
     /**
     * Constructor.
     */
-    function sloodle_view_presenter()
+    function __construct()
     {
     }
 

@@ -45,7 +45,7 @@ class sloodle_view_backpack extends sloodle_base_view {
     /**
     * Constructor.
     */
-    function sloodle_view_backpack()
+    function __construct()
     {
 
 

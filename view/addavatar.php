@@ -80,7 +80,7 @@ class sloodle_view_addavatar extends sloodle_base_view
     /**
     * Constructor.
     */
-    function sloodle_view_addavatar()
+    function __construct()
     {
         // Setup a dummy SloodleSession and use its user object
         $dummysession = new SloodleSession(false);

@@ -72,7 +72,7 @@
         /**
         * Constructor
         */
-        function SloodleController()
+        function __construct()
         {
         }
         

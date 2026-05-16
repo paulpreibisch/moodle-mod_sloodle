@@ -61,7 +61,7 @@ class SloodlePluginManager
     * @param object &$_session Reference to the containing {@link SloodleSession} object, if available.
     * @access public
     */
-    function SloodlePluginManager(&$_session)
+    function __construct(&$_session)
     {
         if (!is_null($_session)) $this->_session = &$_session;
     }

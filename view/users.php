@@ -106,7 +106,7 @@ class sloodle_view_users extends sloodle_base_view
     /**
     * Constructor.
     */
-    function sloodle_view_users()
+    function __construct()
     {
     }
 

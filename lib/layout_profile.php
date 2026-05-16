@@ -21,7 +21,7 @@
         var $entries = array();
         var $originalentries = array();
 
-        function SloodleLayout($r = null) {
+        function __construct($r = null) {
 
             if ($r != null) {
                 return $this->load_from_row($r);
@@ -304,7 +304,7 @@
         var $configs;
         var $originalconfigs;
       
-        function SloodleLayoutEntry($r = null) {
+        function __construct($r = null) {
 
              if ($r != null) {
                 return $this->load_from_row($r);
@@ -622,7 +622,7 @@
         var $name;
         var $value;
 
-        function SloodleLayoutEntryConfig($row = null) {
+        function __construct($row = null) {
 
             if ($row != null) {
                 return $this->load_from_row($row);

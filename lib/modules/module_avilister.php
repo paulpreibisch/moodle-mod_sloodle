@@ -34,7 +34,7 @@
         /**
         * Constructor
         */
-        function SloodleModuleAviLister(&$_session)
+        function __construct(&$_session)
         {
             $constructor = get_parent_class($this);
             parent::$constructor($_session);

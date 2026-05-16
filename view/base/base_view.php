@@ -26,7 +26,7 @@ class sloodle_base_view
     /**
     * Constructor.
     */
-    function sloodle_base_view()
+    function __construct()
     {
     }
 

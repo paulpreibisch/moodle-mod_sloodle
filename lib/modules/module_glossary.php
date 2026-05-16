@@ -47,7 +47,7 @@
         /**
         * Constructor
         */
-        function SloodleModuleGlossary(&$_session)
+        function __construct(&$_session)
         {
             $constructor = get_parent_class($this);
             parent::$constructor($_session);
@@ -234,7 +234,7 @@
         * @param string $concept The name of this entry
         * @param string $definition The definition of this entry
         */
-        function SloodleGlossaryEntry($id, $concept, $definition)
+        function __construct($id, $concept, $definition)
         {
             $this->id = $id;
             $this->concept = $concept;

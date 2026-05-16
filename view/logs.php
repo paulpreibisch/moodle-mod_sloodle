@@ -39,7 +39,7 @@ class sloodle_view_logs extends sloodle_base_view
     /**
     * Constructor.
     */
-    function sloodle_view_logs()
+    function __construct()
     {
     }
 

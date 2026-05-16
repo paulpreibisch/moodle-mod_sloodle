@@ -55,7 +55,7 @@
         /**
         * Constructor
         */
-        function SloodleModulePresenter(&$_session)
+        function __construct(&$_session)
         {
             $constructor = get_parent_class($this);
             parent::$constructor($_session);
@@ -557,7 +557,7 @@
     // FUNCTIONS //
 
         // Constructor
-        function SloodlePresenterSlide($id=0, $presenter=null, $name='', $source='', $type='', $ordering=0, $slideposition=0)
+        function __construct($id=0, $presenter=null, $name='', $source='', $type='', $ordering=0, $slideposition=0)
         {
             $this->id = $id;
             $this->presenter = $presenter;

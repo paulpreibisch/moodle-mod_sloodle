@@ -62,7 +62,7 @@ require_once(SLOODLE_DIRROOT.'/view/base/base_view_module.php');
 
            
       //constructor
-      function sloodleCourseObj($id){
+      function __construct($id){
           
           if(!$this->cm = get_coursemodule_from_id('sloodle',$id)) error ('Course module ID was incorrect.');
           //coursemodule id

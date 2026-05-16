@@ -100,7 +100,7 @@
         * Constructor - initialises members
         * @param bool $process If true (default) then basic request data will be processed immediately. Otherwise, it can be done manually by calling $request->process_request_data()
         */
-        function SloodleSession($process = true)
+        function __construct($process = true)
         {
             // Construct the different parts of the session, as far as possible
             $this->user = new SloodleUser($this);

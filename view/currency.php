@@ -46,7 +46,7 @@ class sloodle_view_currency extends sloodle_base_view {
     /**
     * Constructor.
     */
-    function sloodle_view_currency()
+    function __construct()
     {
 
     }

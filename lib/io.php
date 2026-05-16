@@ -586,7 +586,7 @@
         * @return void
         * @access public
         */
-        function SloodleResponse($status_code = null, $status_descriptor = null, $data = null)
+        function __construct($status_code = null, $status_descriptor = null, $data = null)
         {
             // Store the data
             if (!is_null($status_code)) $this->status_code = (int)$status_code;
@@ -1010,7 +1010,7 @@
         *
         * @param SloodleUser $_session A reference to the {@link SloodleSession} object which this request should use, or null
         */
-        function SloodleRequest(&$_session)
+        function __construct(&$_session)
         {
             // Store our session object
             $this->_session = &$_session;
@@ -1257,7 +1257,7 @@ class SloodleDebugLogger {
 
         // Write the contents to the debug log, if one is defined in SLOODLE_DEBUG_REQUEST_LOG. 
         // Return true if we write something, false if we don't.
-        function log($type, $contents = null) {
+        static function log($type, $contents = null) {
 
             if ( !defined('SLOODLE_DEBUG_REQUEST_LOG') || ( SLOODLE_DEBUG_REQUEST_LOG == '' ) ) {
                 return false;

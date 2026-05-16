@@ -74,7 +74,7 @@
         /**
         * Constructor
         */
-        function SloodleModuleTracker(&$_session = null)
+        function __construct(&$_session = null)
         {
             $constructor = get_parent_class($this);
             parent::$constructor($_session);

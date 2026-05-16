@@ -37,7 +37,7 @@
         * Constructor - initialises the session variable
         * @param object &$_session A reference to the containing {@link SloodleSession} object, if available.
         */
-        function SloodleModule(&$_session)
+        function __construct(&$_session)
         {
             if (!is_null($_session)) $this->_session = &$_session;
         }

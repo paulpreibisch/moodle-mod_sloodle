@@ -47,7 +47,7 @@
         /**
         * Constructor
         */
-        function SloodleModuleChat(&$_session)
+        function __construct(&$_session)
         {
             $constructor = get_parent_class($this);
             parent::$constructor($_session);
@@ -291,7 +291,7 @@
         * @param SloodleUser $user The user who wrote the message
         * @param int $timestamp The timestamp of the message
         */
-        function SloodleChatMessage($id, $message, $user, $timestamp)
+        function __construct($id, $message, $user, $timestamp)
         {
             $this->id = $id;
             $this->message = $message;

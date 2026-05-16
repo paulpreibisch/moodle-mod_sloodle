@@ -56,7 +56,7 @@
         /**
         * Constructor
         */
-        function SloodleCourse()
+        function __construct()
         {
             $this->controller = new SloodleController();
         }

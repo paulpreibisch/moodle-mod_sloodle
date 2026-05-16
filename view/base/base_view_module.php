@@ -79,7 +79,7 @@ class sloodle_base_view_module extends sloodle_base_view
     /**
     * Constructor.
     */
-    function sloodle_base_view_module()
+    function __construct()
     {
     }
 

@@ -29,7 +29,7 @@
         /**
         * Constructor
         */
-        function SloodleCurrency()
+        function __construct()
         {
             
         }
